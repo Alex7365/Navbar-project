@@ -1,5 +1,6 @@
 body {
     font-size: 125%;
+    background-color: #D0DAA5;
 }
 nav ul {
     list-style-type: none;
@@ -7,12 +8,13 @@ nav ul {
     padding: 0;
     display: flex;
 }
-nav a {
+nav#menu a {
     text-decoration: none;
     display: block;
     padding: 0.5em 1em;
-    background-color: aqua;
+    background-color: #D0C2BF;
+    color: #161617;
 }
-nav a:hover {
-    background-color: white;
+nav#menu a:hover {
+    background-color: #F5F5F5;
 }
