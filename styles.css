@@ -4,6 +4,8 @@ body {
     font-family: 'Akshar', sans-serif;
 }
 header, main, footer {
+    width: 40em;
+    max-width: 98%;
     margin: 0 auto;
 }
 nav#menu ul {
