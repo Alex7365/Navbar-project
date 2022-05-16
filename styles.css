@@ -8,14 +8,20 @@ header, main, footer {
     max-width: 98%;
     margin: 0 auto;
 }
-nav#menu ul {
+nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    height: 0;
+    opacity: 0;
 }
-nav#menu a:link {
+nav ul.open {
+    opacity: 1;
+    height: auto;
+}
+nav a:link {
     text-decoration: none;
     display: block;
     font-weight: 700;
@@ -24,12 +30,9 @@ nav#menu a:link {
     color: green;
     border: 1px solid black;
 }
-nav#menu a:hover {
+nav a:hover {
     background-color: #F5F5F5;
     color: #161617;
-}
-nav#menu a:visited {
-    color: red;
 }
 a:link {
     color: #161617;
@@ -40,3 +43,44 @@ a:visited {
 a:hover {
     color: #5656D7;
 }
+a:active {
+    color: #161617;
+}
+a:current {
+    background-color: #D0C2BF;
+}
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48
+  }
+ /* navbar toggle */
+ #menu-toggle {
+     width: 2em;
+     height: 2em;
+     border-radius: 2em;
+     transition: all 0.3s;
+ }
+ #menu-toggle:hover {
+     background-color: #D0C2BF;
+ }
+ #menu-toggle div {
+     width: 50%;
+     height: 3px;
+     background-color: #161617;
+     margin: 4px auto;
+     transform: translateY(12px);
+ }
+  /* tablet view and up */
+ @media only screen and (min-width: 690px) {
+     nav ul {
+         flex-direction: row;
+     }
+     #menu-toggle {
+         opacity: 0;
+         height: 0;
+         width: 0;
+     }
+ }
