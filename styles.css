@@ -8,6 +8,7 @@ header, main, footer {
     max-width: 98%;
     margin: 0 auto;
 }
+/* style the navbar */
 nav ul {
     list-style-type: none;
     margin: 0;
@@ -16,10 +17,13 @@ nav ul {
     flex-direction: column;
     height: 0;
     opacity: 0;
+    transform: translateX(-100%);
+    transition: all 1s ease-in;
 }
 nav.open ul {
     opacity: 1;
     height: auto;
+    transform: translateX(0);
 }
 nav a:link {
     text-decoration: none;
@@ -27,8 +31,12 @@ nav a:link {
     font-weight: 700;
     padding: 0.5em 1em;
     background-color: #D0C2BF;
-    color: green;
+    color: #005700;
     border: 1px solid black;
+}
+nav a:visited {
+    color: #005700;
+    border: transparent;
 }
 nav a:hover {
     background-color: #F5F5F5;
@@ -38,10 +46,10 @@ a:link {
     color: #161617;
 }
 a:visited {
-    color: green;
+    color: #A51212;
 }
 a:hover {
-    color: #5656D7;
+    color: #17769b;
 }
 a:active {
     color: #161617;
@@ -87,6 +95,11 @@ a:current {
  @media only screen and (min-width: 690px) {
      nav ul {
          flex-direction: row;
+         transform: translateX(0);
+         opacity: 1;
+         height: auto;
+         width: auto;
+         transition: none;
      }
      #menu-toggle {
          opacity: 0;
