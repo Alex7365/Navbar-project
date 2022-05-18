@@ -17,7 +17,7 @@ nav ul {
     height: 0;
     opacity: 0;
 }
-nav ul.open {
+nav.open ul {
     opacity: 1;
     height: auto;
 }
@@ -72,6 +72,16 @@ a:current {
      background-color: #161617;
      margin: 4px auto;
      transform: translateY(12px);
+     transition: all 0.3S;
+ }
+ #menu-toggle.open div.one {
+     transform: translateY(20px) rotate(0.125turn);
+ }
+ #menu-toggle.open div.two {
+     opacity: 0;
+ }
+ #menu-toggle.open div.three {
+     transform: translateY(6px) rotate(-0.125turn);
  }
   /* tablet view and up */
  @media only screen and (min-width: 690px) {
